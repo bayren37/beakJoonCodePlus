@@ -2,8 +2,8 @@
 
 using namespace std;
 
-int LCM(int A, int B) {
-	// 유클리드 호제법
+// 유클리드 호제법
+int GCD(int A, int B) {
 	int tmp;
 	while (B != 0) {
 		tmp = A % B;
@@ -18,7 +18,7 @@ int main(void) {
 	scanf("%d", &T);
 	while (T--) {
 		scanf("%d%d", &A, &B);
-		int gcd = A * B / LCM(A, B);
-		printf("%d\n", gcd);
+		int lcm = A * B / GCD(A, B);
+		printf("%d\n", lcm);
 	}
 }
