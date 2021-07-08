@@ -215,4 +215,107 @@ namespace bj {
 
 		return 0;
 	}
+
+	int P10430()
+	{
+		int A, B, C;
+		std::cin >> A >> B >> C;
+
+		std::cout << (A + B) % C << std::endl;
+		std::cout << ((A % C) + (B % C)) % C << std::endl;
+		std::cout << (A * B) % C << std::endl;
+		std::cout << ((A % C) * (B % C)) % C << std::endl;
+
+		return 0;
+	}
+
+	void P1978()
+	{
+		/*
+		* 이전 소수로 판단된 수를 기억하지 않는 버전
+		* 소수 판단을 N보다 작은 소수가 아닌 모든 수로 시도해 봄.
+		*/
+		int T;
+		cin >> T;
+
+		auto isPrime = [](const int N)
+		{
+			if (N == 1)
+				return false;
+
+			int div = N - 1;
+			while (div != 1)
+			{
+				if (N % div-- == 0)
+					return false;
+			}
+			return true;
+		};
+
+		int count = 0;
+		while (T--)
+		{
+			int n;
+			cin >> n;
+			if (isPrime(n))
+				count++;
+		}
+
+		cout << count;
+	}
+
+	int P1929()
+	{
+		/*
+		* 이전 소수로 판단된 수를 기억하는 버전
+		* 소수 판단을 N보다 작은 소수로 나눠 판단함
+		*/
+
+		ios::sync_with_stdio(false);
+		cout.tie(nullptr);
+
+		int M, N;
+		cin >> M >> N;
+
+		vector<int> primes;
+		primes.reserve(1000000);
+
+		for (int i = 2; i <= N; ++i)
+		{
+			bool isPrime = true;
+			for (auto prime : primes)
+			{
+				if (prime * prime > i)
+					break;
+
+				if (i % prime == 0)
+				{
+					isPrime = false;
+					break;
+				}
+			}
+
+			if (isPrime)
+			{
+				if (M <= i && i <= N)
+					cout << i << "\n";
+				primes.push_back(i);
+			}
+		}
+
+		return 0;
+	}
+
+	void P10872()
+	{
+		int N;
+		cin >> N;
+
+		long long ret = 1;
+		while (N)
+		{
+			ret *= N--;
+		}
+		cout << ret;
+	}
 }
