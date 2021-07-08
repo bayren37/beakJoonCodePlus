@@ -3,8 +3,8 @@
 
 using namespace std;
 
+// 유클리드 호제법
 int GCD(int A, int B) {
-	// 유클리드 호제법
 	int tmp;
 	while (B != 0) {
 		tmp = A % B;
