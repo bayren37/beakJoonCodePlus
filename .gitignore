@@ -31,3 +31,10 @@
 *.out
 *.app
 .vs
+/beakJoonCodePlus/Debug/beakJoonCodePlus.tlog
+/beakJoonCodePlus/Debug
+/beakJoonCodePlus/main.cpp
+/beakJoonCodePlus/beakJoonCodePlus.vcxproj.user
+/beakJoonCodePlus/beakJoonCodePlus.vcxproj.filters
+/beakJoonCodePlus/beakJoonCodePlus.vcxproj
+/beakJoonCodePlus/beakJoonCodePlus.sln
