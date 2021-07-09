@@ -31,6 +31,7 @@
 *.out
 *.app
 .vs
+.DS_Store
 /beakJoonCodePlus/Debug/beakJoonCodePlus.tlog
 /beakJoonCodePlus/Debug
 /beakJoonCodePlus/main.cpp
