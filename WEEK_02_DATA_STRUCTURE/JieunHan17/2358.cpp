@@ -16,25 +16,57 @@ int main()
     {
         int x, y;
         scanf("%d %d", &x, &y);
-        checkX[x]++;
-        checkY[y]++;
+        if (checkX.find(x) != checkX.end())
+        {
+            checkX.insert(make_pair(x, checkX[x]++));
+        }
+        else
+        {
+            checkX.insert(make_pair(x, 1));
+        }
+
+        if (checkY.find(y) != checkY.end())
+        {
+            checkY.insert(make_pair(y, checkY[y]++));
+        }
+        else
+        {
+            checkY.insert(make_pair(y, 1));
+        }
+        // checkX[x]++;
+        // checkY[y]++;
     }
 
-    for (int i = 0; i < checkX.size(); i++)
+    map<int, int>::iterator iter;
+    for (iter = checkX.begin(); iter != checkX.end(); iter++)
     {
-        if (checkX[i] >= 2)
+        if ((*iter).second >= 2)
         {
             cnt++;
         }
     }
+    // for (int i = 0; i < checkX.size(); i++)
+    // {
+    //     if (checkX[i] >= 2)
+    //     {
+    //         cnt++;
+    //     }
+    // }
 
-    for (int i = 0; i < checkY.size(); i++)
+    for (iter = checkY.begin(); iter != checkY.end(); iter++)
     {
-        if (checkY[i] >= 2 && checkX[i] < 2)
+        if ((*iter).second >= 2)
         {
             cnt++;
         }
     }
+    // for (int i = 0; i < checkY.size(); i++)
+    // {
+    //     if (checkY[i] >= 2 && checkX[i] < 2)
+    //     {
+    //         cnt++;
+    //     }
+    // }
 
     printf("%d", cnt);
 
