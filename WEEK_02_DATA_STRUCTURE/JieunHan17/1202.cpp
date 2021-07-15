@@ -13,7 +13,6 @@ priority_queue<int> jewel_price;
 vector<int> bag;
 vector<pair<int, int> > jewel; //무게, 가격
 
-/* 계속해서 보석을 넣으면 다른 보석을 넣을 때 비워줘야 하는 게 아닐까? */
 bool compare(pair<int, int> a, pair<int, int> b)
 {
     return a.first < b.first;
