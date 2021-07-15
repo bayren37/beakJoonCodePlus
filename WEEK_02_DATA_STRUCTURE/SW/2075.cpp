@@ -1,3 +1,5 @@
+//N번째 큰 수
+
 #include <cstdio>
 #include <stack>
 #define SIZE 1501
