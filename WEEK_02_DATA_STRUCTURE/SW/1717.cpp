@@ -1,3 +1,5 @@
+//집합의 표현
+
 #include <bits/stdc++.h>
 
 using namespace std;
