@@ -595,7 +595,7 @@ namespace bj {
 			int count = 0;
 			for (size_t number = 2; number < MAX_SIZE && 0 < testCase - number; ++number)
 			{
-				if (number > testCase / 2)
+				if (number > (size_t)testCase / 2)
 					break;
 
 				if (filter[number] && filter[testCase - number])
