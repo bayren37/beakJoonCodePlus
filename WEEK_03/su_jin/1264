@@ -1,17 +1,17 @@
 /*
 
-//¹éÁØ_¹®ÀÚ¿­_1264¹ø
+//ë°±ì¤€_ë¬¸ìì—´_1264ë²ˆ
 
 #include<iostream>
 #include<string>
 
 using namespace std;
 int main() {
-	char s[256]; //ÇÑ ÁÙ ÃÖ´ë 255±ÛÀÚ
+	char s[256]; //í•œ ì¤„ ìµœëŒ€ 255ê¸€ì
 	int cnt = 0;
 	while (1) {
 		cin.getline(s, 256);
-		//ÀÔ·ÂÀÇ ³¡ÀÇ ÇÑÁÙ¿¡ #¸¸ ÀÔ·Â¹ŞÀ» ¶§ ÀÔ·ÂÁ¾·á
+		//ì…ë ¥ì˜ ëì˜ í•œì¤„ì— #ë§Œ ì…ë ¥ë°›ì„ ë•Œ ì…ë ¥ì¢…ë£Œ
 		if (s[0] == '#') { return 0; }
 
 		for (int i = 0; i < strlen(s); i++) {
