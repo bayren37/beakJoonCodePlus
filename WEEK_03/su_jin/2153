@@ -1,0 +1,42 @@
+//코드 출처:https://jaemin8852.tistory.com/229
+
+#include<iostream>
+#include<string>
+
+using namespace std;
+
+string str;
+string sucess = "It is a prime word.";
+string failure = "It is not a prime word.";
+
+int ans, cnt;
+
+int main() {
+	cin >> str;
+	for (int i = 0; i < str.length(); i++) {
+		char tmp = str[i];
+		if (tmp >= 'a' && tmp <= 'z') {
+			tmp = tmp - ('a' - 1);
+		}
+		else {
+			tmp = tmp - ('A' - 27);
+		}
+		ans = ans + tmp;
+	}
+	if (ans == 1) {
+		cout << sucess << endl;
+		return 0;
+	}
+	for (int i = 0; i <= ans; ++i) {
+		if (ans % i == 0) {
+			cnt++;
+		}
+	}
+	if (cnt == 2) {
+		cout << sucess << endl;
+	}
+	else cout << failure << endl;
+	
+	return 0;
+
+}
