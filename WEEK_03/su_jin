@@ -1,0 +1,23 @@
+//백준_문자열_1427번
+//sort함수가 아니라 단순 구현
+
+#include<iostream>
+#include<algorithm> // -> sort함수가 존재하는 헤더파일
+
+using namespace std;
+
+int main_1(void) {
+
+	string str;
+	cin >> str;
+	sort(str.begin(), str.end(), greater<char>());
+	//sort()함수는 내림차순, 오름차순으로 정렬해주는 함수
+	//내림차순으로 정렬
+	cout << str << endl;
+	sort(str.begin(), str.end(), less<char>());
+	//세번째 인자를 넣지 않으면 default값으로 오름차순으로 정렬
+	//세번째 인자에 greater 대신 les를 넣으면 오름차순으로 정렬
+	cout << str;
+	return 0;
+
+}
