@@ -12,7 +12,10 @@ struct TRIE
     TRIE()
     {
         finish = false;
-        fill(node, node + 10, nullptr);
+        for (int i = 0; i < 10; i++)
+        {
+            node[i] = 0;
+        }
     }
 
     void insert(char *input)
@@ -84,13 +87,13 @@ int main()
             result = root->find(arr[j]);
             if (!result)
             {
-                printf("No\n");
+                printf("NO\n");
                 break;
             }
         }
         if (result)
         {
-            printf("Yes\n");
+            printf("YES\n");
         }
     }
     return 0;
