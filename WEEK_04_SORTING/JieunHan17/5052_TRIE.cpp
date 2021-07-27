@@ -1,4 +1,6 @@
 #include <cstdio>
+#include <cstring>
+#include <cstdlib>
 #include <algorithm>
 
 using namespace std;
@@ -41,6 +43,23 @@ struct TRIE
     }
 };
 
+char *erase(char *array)
+{
+    char *result = (char *)malloc(sizeof(char) * 11);
+    int len = strlen(array);
+    int idx = 0;
+    for (int i = 0; i < len; i++)
+    {
+        if (array[i] == ' ')
+        {
+            continue;
+        }
+        result[idx] = array[i];
+        idx++;
+    }
+    return result;
+}
+
 int main()
 {
     int t;
@@ -54,7 +73,8 @@ int main()
         scanf("%d", &n);
         for (int j = 0; j < n; j++)
         {
-            scanf("%s", arr[j]);
+            scanf(" %[^\n]", arr[j]);
+            strcpy(arr[j], erase(arr[j]));
             root->insert(arr[j]);
         }
 
