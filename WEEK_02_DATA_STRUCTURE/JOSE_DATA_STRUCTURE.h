@@ -196,7 +196,7 @@ namespace bj {
 
 	/*AC	6521KB	68ms
 	*/
-	int P5431()
+	int P5430()
 	{
 		constexpr char REVERSE = 'R';
 		constexpr char DISCARD = 'D';
@@ -291,7 +291,7 @@ namespace bj {
 	}
 
 	/*Tea Time	2292KB, 1ms*/
-	int P6118()
+	int P6018()
 	{
 		unordered_map<int, unordered_set<int>> map;//#cow, #cow's friendSet
 		int cowCount, initialFriendCount, querySize;
