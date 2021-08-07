@@ -22,7 +22,7 @@ int main()
     for (int i = 3; i < n; i++)
     {
         //3가지 경우가 있음
-        //a, b, c
+        //10, 20, a, b, c
         //(a, b): dp[i - 1]
         //(b, c): dp[i - 3] + wine[i] + wine[i - 1]
         //(a, c): dp[i - 2] + wine[i]
