@@ -25,9 +25,16 @@ int main(void) {
 	for (int i = 0; i < N; i++) {
 		scanf("%d%d", &arr[i].first, &arr[i].second);
 	}
+	
+	// 주석은 끝나는 시간을 pair의 first 값으로 받아와 따로 compare 함수 필요없이 사용가능 (속도 향상)
+	/*for (int i = 0; i < N; i++) {
+		scanf("%d%d", &arr[i].second, &arr[i].first);
+	}*/
 
 	// 회의가 끝나는 시간을 기준으로 오름차순으로 정렬
 	sort(arr.begin(), arr.end(), compare);
+	
+	/*sort(arr.begin(), arr.end());*/
 
 	// 비교를 위해 첫번째로 빨리 끝나는 첫번째 요소를 변수로 받아줌
 	Pair tmp = arr[0];
@@ -39,6 +46,13 @@ int main(void) {
 			tmp = arr[i];
 		}
 	}
+	
+	/*for (int i = 1; i < N; i++) {
+		if (tmp.first <= arr[i].second) {
+			count++;
+			tmp = arr[i];
+		}
+	}*/
 
 	printf("%d\n", count);
 }
