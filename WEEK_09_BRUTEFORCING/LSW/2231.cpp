@@ -1,3 +1,5 @@
+// 분해합
+
 #include <cstdio>
 #include <vector>
 
