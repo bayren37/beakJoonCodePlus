@@ -63,7 +63,7 @@ int main(void) {
 	scanf("%d", &N);
 
 	for (int i = 1; i <= N; i++) {
-		col = new int[15];
+		col = new int[N+1];
 		// 1행을 1~N까지 넣어주면서 확인한다.
 		col[1] = i;
 		// 1행부터 dfs함수 시작
