@@ -42,11 +42,11 @@ string split(string p) {
 
         if (count == 0 && isForward) {
             answer += p.substr(0, i + 1);
-            answer += split(p.substr(i + 1, p.size() - (i + 1)));
+            answer += split(p.substr(i + 1));
             return answer;
         }
         else if (count == 0 && !isForward) {
-            answer += "(" + split(p.substr(i + 1, p.size() - (i + 1))) + ")";
+            answer += "(" + split(p.substr(i + 1)) + ")";
             answer += isReverse(p.substr(0, i + 1));
             return answer;
         }
